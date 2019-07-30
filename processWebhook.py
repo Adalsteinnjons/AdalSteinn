@@ -28,7 +28,7 @@ def webhook():
         if data.status_code == 200:
             response = {'fulfillmentText':"Sie werden in Kürze von einem Menschen betreut."}
         else:
-            response = {'fulfillmentText':"did not get good response"}
+            response = {'fulfillmentText':"Wrong status code"}
 
     return flask.make_response(flask.jsonify(response))
 
