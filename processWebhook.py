@@ -26,9 +26,9 @@ def webhook():
                    "metadata":"String to pass to secondary receiver app"}
         data = requests.post(url, data=json.dumps(payload), headers=headers)
         if data.status_code == 200:
-            response = {'fulfillmentText':"Sie werden in Kürze von einem Menschen betreut."}
+            response = {'fulfillmentText':"Ein Mitarbeiter wurde benachrichtigt. Der Bot wurde abgestellt."}
         else:
-            response = {'fulfillmentText':"Wrong status code"}
+            response = {'fulfillmentText':"Wrong status code."}
 
     return flask.make_response(flask.jsonify(response))
 
