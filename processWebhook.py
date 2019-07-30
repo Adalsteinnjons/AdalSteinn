@@ -26,7 +26,7 @@ def webhook():
                    "metadata":"String to pass to secondary receiver app"}
         data = requests.post(url, data=json.dumps(payload), headers=headers)
         if data.status_code == 200:
-            response = {'fulfillmentText':"From webhook"}
+            response = {'fulfillmentText':"Sie werden in Kürze von einem Menschen betreut."}
         else:
             response = {'fulfillmentText':"did not get good response"}
 
